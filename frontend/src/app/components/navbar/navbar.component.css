@@ -1,0 +1,48 @@
+:host{
+    display: block;
+}
+
+.custom-navbar{
+    position: sticky;
+    top: 0;
+    z-index: 30;
+    background: rgba(11, 13, 15, 0, 0.86);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.navbar-brand{
+    font-family: 'Sora', sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #f8fafc;
+    letter-spacing: 0.5px;
+}
+
+brand-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--brand);
+  box-shadow: 0 0 16px rgba(255, 106, 61, 0.9);
+}
+
+.nav-link {
+  color: #f8fafc;
+  font-weight: 500;
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  transform: color 0.2s ease background-color 0.2s ease;
+}
+.nav-link:hover {
+  color: #f8fafc;
+  background: rgba(255, 255, 255, 0.5);
+}
+.nav-link.active {
+  color: white;
+  background: linear-gradient(135deg rgba(255, 106, 61, 0.9), rgba(255, 106, 61, 0.7));
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}

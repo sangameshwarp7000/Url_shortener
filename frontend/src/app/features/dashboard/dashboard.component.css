@@ -1,0 +1,66 @@
+h2 {
+  font-family: 'Sora', sans-serif;
+}
+
+.bg-dark-input {
+  background: rgba(255, 255, 255, 0.03) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #e9edf5;
+}
+
+.dropdown-item {
+  background-color: black;
+}
+
+.bg-dark-input::placeholder {
+  color: #8d96a5;
+}
+
+.bg-dark-input:focus {
+  border-color: rgba(255, 106, 61, 0.6);
+  box-shadow: 0 0 0 0.2rem rgba(255, 106, 61, 0.2);
+}
+
+.dashboard-table {
+  --bs-table-bg: transparent;
+  --bs-table-border-color: rgba(255, 255, 255, 0.08);
+}
+
+.dashboard-table th {
+  color: #d8dce3;
+  font-weight: 600;
+  font-size: 0.92rem;
+}
+
+.dashboard-table td {
+  color: #b9c0cc;
+}
+
+.original-url {
+  max-width: 300px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.short-link {
+  color: #ffb399;
+  text-decoration: none;
+}
+
+.short-link:hover {
+  color: #ffd7c7;
+}
+
+.bg-brand {
+  background-color: var(--brand);
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.qr-wrap {
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(0, 0, 0, 0.25);
+  width: fit-content;
+}

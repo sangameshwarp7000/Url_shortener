@@ -1,0 +1,47 @@
+<section class="glass-card p-4 p-md-5 fade-in-up">
+  <p class="eyebrow mb-2">FAST + CLEAN URL SHORTENING</p>
+  <h1 class="title mb-3">Turn long links into memorable short URLs</h1>
+  <p class="text-secondary mb-4">
+    Create trackable short links, copy them quickly, and share with confidence.
+  </p>
+
+  <form class="mb-3" [formGroup]="urlForm" (ngSubmit)="shortenUrl()">
+    <label class="form-label text-light mb-2 fw-semibold" for="urlInput">Long URL</label>
+    <div class="input-group input-group-lg">
+      <input
+        id="urlInput"
+        type="url"
+        class="form-control bg-dark-input"
+        formControlName="originalUrl"
+        placeholder="https://example.com/very/long/url"
+        autocomplete="off"
+      />
+      <button class="btn btn-brand px-4" type="submit" [disabled]="isSubmitting">
+        <span *ngIf="!isSubmitting">Shorten</span>
+        <span *ngIf="isSubmitting" class="spinner-border spinner-border-sm" role="status"></span>
+      </button>
+    </div>
+    <p *ngIf="hasUrlError" class="text-danger mt-2 mb-0 small">
+      Enter a valid URL starting with <strong>http://</strong> or <strong>https://</strong>.
+    </p>
+  </form>
+  <div *ngIf="apiMessage" class="alert py-2 px-3 mt-3 mb-0" [ngClass]="'alert-' + apiMessage.type">
+    {{ apiMessage.text }}
+  </div>
+
+  <div *ngIf="createdLink" class="result-card mt-4 p-3 p-md-4">
+    <p class="small text-secondary mb-1">Generated short URL</p>
+    <a class="generated-link" target="_blank" rel="noopener" [href]="createdLink.short_url">{{ 
+        createdLink.short_url 
+    }}</a>
+
+    <div class="d-flex flex-wrap gap-2 mt-3">
+      <button class="btn btn-outline-light" type="button" (click)="copyLink(createdLink.short_url)">
+        Copy Link
+    </button>
+      <a class="btn btn-outline-light" target="_blank" rel="noopener " [href]="createdLink.short_url"
+        >Open
+    </a>
+    </div>
+  </div>
+</section>

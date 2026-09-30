@@ -1,0 +1,48 @@
+.eyebrow {
+  letter-spacing: 0.14em;
+  font-size: 0.78rem;
+  color: var(--brand);
+}
+
+.btn brand {
+    border: 1px solid rgba(255, 106, 61, 0.6);
+}
+
+.title {
+  max-width: 780px;
+  font-size: clamp(1.65rem, 2.2vw, 2.2rem);
+  line-height: 1.25;
+  font-family: 'Sora', sans-serif;
+}
+
+.bg-dark-input {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #e9edf5;
+}
+
+.bg-dark-input::placeholder {
+  color: #8d96a5;
+}
+
+.bg-dark-input:focus {
+  border-color: rgba(255, 106, 61, 0.6);
+  box-shadow: 0 0 0 0.2rem rgba(255, 106, 61, 0.2);
+}
+
+.result-card {
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.015));
+}
+
+.generated-link {
+  color: #ffb399;
+  text-decoration: none;
+  word-break: break-all;
+  font-weight: 600;
+}
+
+.generated-link:hover {
+  color: #ffd7c7;
+}
